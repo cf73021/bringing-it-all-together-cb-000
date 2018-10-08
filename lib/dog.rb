@@ -65,7 +65,9 @@ class Dog
     WHERE id = ?
     LIMIT 1
     SQL
-  result = DB[:conn].execute(sql, id).flatten
-  self.new_from_db(result)
+    result = DB[:conn].execute(sql, id).flatten
+    self.new_from_db(result)
   end
+
+
 end
